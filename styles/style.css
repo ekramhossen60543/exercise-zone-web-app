@@ -7,6 +7,7 @@
   padding: 0;
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
+  color: white;
 }
 
 /* Using Fonts */
@@ -21,6 +22,13 @@
   max-width: 1060px;
   margin: 100px auto;
 }
+.btn-primary {
+  background-color: #e6533c;
+  border: none;
+  border-radius: 42px;
+  padding: 16px 46px;
+}
+
 /* Body Styles */
 body {
   background-color: #000000;
@@ -40,7 +48,7 @@ body {
 .header-container {
   max-width: 1060px;
   max-height: 715px;
-  margin: auto;
+  margin: 0 auto;
 }
 /* Navbar Related Styles */
 .navbar {
@@ -112,12 +120,6 @@ body {
 }
 .banner-content-btn {
   gap: 14px;
-}
-.join-btn {
-  background-color: #e6533c;
-  border: none;
-  border-radius: 42px;
-  padding: 16px 46px;
 }
 .join-btn a {
   text-decoration: none;
@@ -220,4 +222,101 @@ body {
   font-size: 0.8rem;
   font-weight: 300;
   color: rgba(239, 237, 232, 0.65);
+}
+
+/* Main Section Styles */
+.main {
+  max-width: 1060px;
+  margin: 100px auto;
+}
+/* Change Habits Section Styles */
+.change-habits {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 58px;
+  margin-bottom: 100px;
+}
+.change-habits-content {
+  max-width: 630px;
+  text-align: center;
+}
+.change-habits-content > h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.change-habits-content > p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+.habits-cards {
+  gap: 40px;
+}
+.habits-card {
+  max-width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.habits-card img {
+  width: 100%;
+  width: 180px;
+  height: 180px;
+  border: 4px solid rgb(36, 36, 36);
+  box-shadow: 0px 4px 4px 0px rgba(36, 36, 36, 0.438);
+  border-radius: 50%;
+}
+.habits-card-content {
+  text-align: center;
+}
+.habits-card-content > h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.habits-card-content > p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Extra Run Section Styles */
+.extra-run-container {
+  background-color: #222222;
+  padding: 30px 30px 30px 54px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  margin-bottom: 100px;
+}
+.extra-run-content {
+  max-width: 350px;
+  flex-direction: column;
+}
+.extra-run-content > h2 {
+  margin-bottom: 14px;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.extra-run-content > p {
+  margin-bottom: 34px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 200;
+}
+.extra-run-content > button {
+  width: 224px;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.extra-run-img {
+  max-width: 366px;
+}
+.extra-run-img img {
+  width: 366px;
+  height: 312px;
+  border-radius: 12px;
 }
