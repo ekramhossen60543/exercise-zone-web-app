@@ -795,7 +795,13 @@ select {
   }
 
   /* Footer section responsive */
+  .footer-content {
+    gap: 30px;
+  }
   .believe {
     max-width: 317px;
+  }
+  .get-start-container {
+    gap: 20px;
   }
 }
