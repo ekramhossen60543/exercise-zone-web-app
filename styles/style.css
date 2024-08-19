@@ -21,6 +21,7 @@
 .container {
   max-width: 1060px;
   margin: 100px auto;
+  padding: 0 20px;
 }
 .btn-primary {
   background-color: #e6533c;
@@ -38,10 +39,11 @@ body {
 /* Header Related Styles */
 .header {
   width: 100%;
+  height: auto;
   background-image: linear-gradient(
     to bottom,
-    rgba(83, 82, 82, 0.541),
-    #0f0f0f
+    rgba(83, 82, 82, 0.384),
+    #0f0f0f48
   );
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -63,7 +65,7 @@ body {
   font-style: italic;
   font-size: 2.25rem;
   font-weight: bolder;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .nav-items {
   justify-content: center;
@@ -72,7 +74,15 @@ body {
   border-radius: 40px;
   padding: 5px 5px;
   gap: 45px;
-  margin-top: 50px;
+  margin-top: 20px;
+}
+.nav-menu {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+.nav-menu img {
+  width: 100%;
 }
 #home-btn {
   background-color: #e6533c;
@@ -105,11 +115,13 @@ body {
   flex-direction: column;
   gap: 28px;
 }
-.banner-content-title {
+.banner-slogan .banner-content-title {
   font-size: 4.8rem;
   font-weight: 700;
   line-height: 70px;
+  margin-bottom: 28px;
 }
+
 #banner-title-shape {
   font-family: "Miama", sans-serif;
   font-weight: 300;
@@ -181,8 +193,20 @@ body {
 .banner-img .tutorial-videos .circle {
   width: 40px;
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: #e6533c;
+}
+.circle-img {
+  width: 25px;
+  height: 25px;
+  display: none;
+}
+.circle-img > img {
+  width: 100%;
+  height: 100%;
 }
 .banner-img .free-videos {
   box-sizing: border-box;
@@ -317,8 +341,8 @@ body {
   max-width: 366px;
 }
 .extra-run-img img {
-  width: 366px;
-  height: 312px;
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
 }
 
@@ -355,7 +379,7 @@ body {
   justify-content: center;
 }
 .image-content {
-  max-width: 180px;
+  width: 180px;
   position: absolute;
   top: 150px;
 }
@@ -553,6 +577,7 @@ select {
   gap: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
+  border-radius: 18px;
 }
 
 .team-gallery-box {
@@ -643,4 +668,134 @@ select {
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 200;
+}
+
+/* Responsive for small devices*/
+@media screen and (max-width: 576px) {
+  /* Banner Section Change Styles */
+  .header {
+    height: 950px;
+  }
+  .header-container,
+  .footer-container,
+  .bmi-calculate-box {
+    padding: 0 20px;
+  }
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-menu {
+    display: block;
+    margin-top: 20px;
+  }
+  .nav-items,
+  .play-icon {
+    display: none;
+  }
+  /* All Flex Direction Column */
+  .banner,
+  .change-habits,
+  .habits-cards,
+  .banner-img-container,
+  .extra-run-container,
+  .bmi-calculate-box,
+  .footer-container,
+  .footer-content,
+  .get-start-container {
+    flex-direction: column;
+  }
+  .banner-slogan {
+    max-width: 280px;
+  }
+  .banner-content-title {
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    line-height: 35px !important;
+  }
+  #banner-title-shape {
+    font-size: 4rem !important;
+  }
+  .banner-content-btn {
+    justify-content: space-between;
+  }
+  .banner-content-btn .join-btn,
+  .download-btn {
+    width: 170px;
+    padding: 16px 20px;
+  }
+  .tutorial-videos .circle .circle-img {
+    display: block;
+  }
+  .tutorial-videos {
+    max-width: 180px;
+    padding: 10px 10px !important;
+    bottom: 250px !important;
+    left: 20px;
+  }
+  .free-videos {
+    max-width: 150px;
+    padding: 10px 10px !important;
+    bottom: 450px !important;
+    right: 0px !important;
+  }
+
+  /* Extra run section responsive */
+  .extra-run-container {
+    gap: 31px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin: 0 20px;
+  }
+
+  /* Training and exercise section responsive */
+  .train-exercise-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-columns: 175px;
+    grid-auto-rows: 128px;
+  }
+  .gallery-box {
+    object-fit: cover;
+
+    background-position: center;
+  }
+  .col-2 {
+    grid-column: span 1;
+  }
+  .image-content {
+    width: 150px !important;
+    top: 80px;
+  }
+
+  /* Our team gallery section responsive */
+  .our-team-gallery {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-columns: 313px;
+    grid-auto-rows: 272px;
+    padding: 20px;
+  }
+  .team-gallery-box {
+    object-fit: cover;
+    background-position: center;
+  }
+
+  /* BMI calculator section responsive */
+  .bmi-calculate-box {
+    gap: 42px;
+  }
+  .bmi-cal-chart > h2 {
+    text-align: left;
+  }
+  .bmi-cal-chart {
+    max-width: 310px;
+  }
+  .bmi-cal-input-container {
+    max-width: 350px;
+  }
+
+  /* Footer section responsive */
+  .believe {
+    max-width: 317px;
+  }
 }
